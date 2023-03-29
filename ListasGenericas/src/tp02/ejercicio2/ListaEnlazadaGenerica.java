@@ -230,5 +230,13 @@ public class ListaEnlazadaGenerica<T> extends ListaGenerica<T> {
 		}
 		return true;
 	}
-
+	public boolean agregar(T[] v) {
+		if(v[0]!=null) {
+			for(int i=0;i<v.length;i++) {
+				agregarFinal(v[i]);
+			}
+		return true;
+		}
+		return false;
+	}
 }
