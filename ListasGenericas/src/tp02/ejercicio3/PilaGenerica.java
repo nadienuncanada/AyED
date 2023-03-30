@@ -1,6 +1,7 @@
 package tp02.ejercicio3;
 import tp02.ejercicio2.*;
-public class ColaGenerica<T> extends NodoGenerico<T>{
+
+public class PilaGenerica<T> extends NodoGenerico<T> {
 	private NodoGenerico<T> inicio;
 	private NodoGenerico<T> actual;
 	private NodoGenerico<T> fin;
@@ -15,21 +16,23 @@ public class ColaGenerica<T> extends NodoGenerico<T>{
 	public void comenzar() {
 		actual = inicio;
 	}
-	public boolean encolar(T elem) {
+	public boolean apilar(T elem) {
 		NodoGenerico<T> aux = new NodoGenerico<T>();
 		aux.setDato(elem);
+
 		if (this.inicio == null) {
 			this.inicio = aux;
 			this.actual = aux;
 			this.fin = aux;
 		} else {
-			fin.setSiguiente(aux);
-			fin = aux;
+			aux.setSiguiente(this.inicio);
+			this.inicio = aux;
 		}
-		tamanio++;
+		this.tamanio++;
 		return true;
 	}
-	public T desencolar() {
+	
+	public T desapilar() {
 		if(this.inicio!=null) {
 			T aux=this.inicio.getDato();
 			if(this.inicio.getSiguiente()==null){
@@ -50,5 +53,4 @@ public class ColaGenerica<T> extends NodoGenerico<T>{
 		}
 		return null;
 	}
-	
 }
