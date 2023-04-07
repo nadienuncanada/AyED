@@ -1,5 +1,7 @@
 package tp02.ejercicio3;
 
+//import tp02.ejercicio3.ColaGenerica;
+
 public class PruebaCola_Pila {
 
 	public static void main(String[] args) {
