@@ -1,4 +1,4 @@
-package tp03.ejercicio1;
+package tp02.ejercicio2;
 //import tp02.ejercicio2.*;
 public class ColaGenerica<T> extends NodoGenerico<T>{
 	private NodoGenerico<T> inicio;
