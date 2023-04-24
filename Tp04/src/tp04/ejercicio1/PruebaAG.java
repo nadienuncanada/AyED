@@ -58,6 +58,7 @@ public class PruebaAG {
 		System.out.println("Altura de : "+raiz.altura());
 		System.out.println("La altura en la que se encuentra el dato es: "+raiz.nivel(4));
 		System.out.println("La anchura del arbol es: "+raiz.ancho());
+		System.out.println(raiz.esAncestro(4,10));
 
 
 	}

@@ -1,4 +1,4 @@
-package tp04.ejercicio1;
+package tp04.ejercicio5;
 
 import tp02.ejercicio2.ColaGenerica;
 import tp02.ejercicio2.ListaEnlazadaGenerica;
@@ -173,54 +173,6 @@ public class ArbolGeneral<T> {
 			}
 		}
 		return max;
-	}
-
-	public Boolean esAncestro(T a, T b) {
-		ArbolGeneral<T> arbol=this;
-		ArbolGeneral<T> rama=(BuscarAncestro(a,arbol));
-		if(rama!=null) {
-			return BuscarDescendiente(rama,b);
-		}
-			else
-				return false;
-		
-	}
-	private ArbolGeneral<T> BuscarAncestro(T a,ArbolGeneral<T> arbol) {
-		ArbolGeneral<T> aux=null;
-		System.out.println(arbol.getDato());
-
-		if(arbol.getDato()==a) {
-			System.out.println(arbol.getDato());
-			System.out.println(arbol.getDato()==a);
-			System.out.println("Devolvi BIEN");
-			return arbol;
-		}
-		else {
-			ListaGenerica<ArbolGeneral<T>> hijo= arbol.getHijos();
-			hijo.comenzar();
-			while(!hijo.fin()) {
-				aux= BuscarAncestro(a,hijo.proximo());
-			}
-			
-		}
-		return aux;
-	}
-	private Boolean BuscarDescendiente(ArbolGeneral<T> rama,T b) {
-		System.out.println(rama.getDato());
-		boolean aux= false;
-		if(rama.getDato()==b) {
-			return true;
-		}
-		else {
-			if(rama.tieneHijos()) {
-				ListaGenerica<ArbolGeneral<T>> hijo=rama.getHijos();
-				hijo.comenzar();
-				while(!hijo.fin() & !aux) {
-					aux= BuscarDescendiente(hijo.proximo(),b);
-				}
-			}
-		}
-		return aux;
 	}
 
 }

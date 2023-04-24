@@ -1,5 +1,8 @@
 package tp03.ejercicio4;
-
+/* Caso Base= que sea hoja, return dato.(es decir solo 1 nodo). 
+ * else arbol.dato+ max(maximoretardo(arbol.gethijoiz)maximoretardo(arbol.gethijoder)).
+ * 
+ */
 import tp03.ejercicio1.ArbolBinario;
 import tp03.ejercicio1.ColaGenerica;
 public class RedBinariaLlena {
