@@ -15,7 +15,7 @@ public class RedDeAguaPotable {
 			return min;
 		}
 		else {
-			ListaGenerica<ArbolGeneral<Integer>> hijo=null;
+			ListaGenerica<ArbolGeneral<Integer>> hijo=null;//aca se puede poner de una arbol.getHijos();
 			hijo=arbol.getHijos();
 			hijo.comenzar();
 			while(!hijo.fin()) {
